@@ -70,5 +70,6 @@ Run the following commands to measure energy consumption across 10 replicates wi
 
 ```
 cd benchmark_energy/
-./run.sh
+./run.sh carnivores_aa_hmc_patterns_4096.xml
+./run.sh carnivores_codon_hmc_patterns_4096.xml
 ```
