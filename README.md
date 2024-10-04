@@ -17,17 +17,22 @@ Please see instructions to compile BEAGLE and install BEAST for reproducing the 
 ### Installation 
 
 BEAGLE
+
 ```
-git clone -b tensor_cores https://github.com/beagle-dev/beagle-lib.git
+git clone -b tensor-cores https://github.com/beagle-dev/beagle-lib.git
 cd beagle-lib/
 mkdir build
 cd build/
-cmake -DBEAGLE_BENCHMARK_ENERGY=OFF -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON ..
+cmake -DBEAGLE_BENCHMARK_ENERGY=OFF -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON -DCMAKE_INSTALL_PREFIX=$HOME ..
+make
+make install
 ```
+
+You can set the install location using `CMAKE_INSTALL_PREFIX`. 
 
 BEAST
 ```
-git clone -b tensor_cores https://github.com/beast-dev/beast-mcmc.git
+git clone -b tensor-cores https://github.com/beast-dev/beast-mcmc.git
 cd beast-mcmc/
 ant
 ```
@@ -50,16 +55,18 @@ BEAGLE
 Please note that the cmake flag `-DBEAGLE_BENCHMARK_ENERGY=ON` is different from the installation above. Do not turn this flag ON to benchmark timings since measuring energy requires significant overhead.
 
 ```
-git clone -b tensor_cores https://github.com/beagle-dev/beagle-lib.git
+git clone -b tensor-cores https://github.com/beagle-dev/beagle-lib.git
 cd beagle-lib/
 mkdir build
 cd build/
 cmake -DBEAGLE_BENCHMARK_ENERGY=ON -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON ..
 ```
 
+You can set the install location using `CMAKE_INSTALL_PREFIX`. 
+
 BEAST
 ```
-git clone -b tensor_cores https://github.com/beast-dev/beast-mcmc.git
+git clone -b tensor-cores https://github.com/beast-dev/beast-mcmc.git
 cd beast-mcmc/
 ant
 ```
