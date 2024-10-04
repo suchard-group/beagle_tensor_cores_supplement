@@ -8,7 +8,7 @@ This repository was used to benchmark kernels with the following versions,
 * NVIDIA Nsight Systems version 2024.4.2.133-244234382004v0
 * NVIDIA (R) Nsight Compute Command Line Profiler Version 2024.2.0.0 (build 34181891) (public-release)
 
-Different versions of CUDA or the profiling tools would reqire further edits to the commands in [./timings/aa/run.sh](./timings/aa/run.sh), [./timings/codon/run.sh](./timings/codon/run.sh), and [./energy/run.sh](./energy/run.sh). 
+Different versions of CUDA or the profiling tools would reqire further edits to the commands in [./benchmark_time/aa/run.sh](./timings/aa/run.sh), [./benchmark_time/codon/run.sh](./timings/codon/run.sh), and [./benchmark_energy/run.sh](./energy/run.sh). 
 
 Please see instructions to compile BEAGLE and install BEAST for reproducing the benchmarks.
 
@@ -32,7 +32,7 @@ cd beast-mcmc
 ant
 ```
 
-In [./timings/aa/run.sh](./timings/aa/run.sh) and [./timings/codon/run.sh](./timings/codon/run.sh) setup `BEAST_JAR` and `LD_LIBRARY_PATH` variables to point to the BEAST JAR file and the BEAGLE library, respectively.
+In [./benchmark_time/aa/run.sh](./benchmark_time/aa/run.sh) and [./benchmark_time/codon/run.sh](./benchmark_time/codon/run.sh) setup `BEAST_JAR` and `LD_LIBRARY_PATH` variables to point to the BEAST JAR file and the BEAGLE library, respectively.
 
 Run the following commands to time all the XMLs with increasing number of patterns, across 10 replicates for both amino acid and codon models.
 
@@ -64,7 +64,7 @@ cd beast-mcmc
 ant
 ```
 
-In [./energy/run.sh](./energy/run.sh) set `BEAST_JAR` and `LD_LIBRARY_PATH` variables to point to the BEAST JAR file and the BEAGLE library, respectively.
+In [./benchmark_energy/run.sh](./benchmark_energy/run.sh) set `BEAST_JAR` and `LD_LIBRARY_PATH` variables to point to the BEAST JAR file and the BEAGLE library, respectively.
 
 Run the following commands to measure energy consumption across 10 replicates with a random time delay between consecutive iterations for both amino acid and codon models,
 
