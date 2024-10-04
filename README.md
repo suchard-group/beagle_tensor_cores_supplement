@@ -19,7 +19,7 @@ Please see instructions to compile BEAGLE and install BEAST for reproducing the 
 BEAGLE
 ```
 git clone -b tensor_cores https://github.com/beagle-dev/beagle-lib.git
-cd beagle-lib
+cd beagle-lib/
 mkdir build
 cd build/
 cmake -DBEAGLE_BENCHMARK_ENERGY=OFF -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON ..
@@ -28,7 +28,7 @@ cmake -DBEAGLE_BENCHMARK_ENERGY=OFF -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON 
 BEAST
 ```
 git clone -b tensor_cores https://github.com/beast-dev/beast-mcmc.git
-cd beast-mcmc
+cd beast-mcmc/
 ant
 ```
 
@@ -37,7 +37,7 @@ In [./benchmark_time/aa/run.sh](./benchmark_time/aa/run.sh) and [./benchmark_tim
 Run the following commands to time all the XMLs with increasing number of patterns, across 10 replicates for both amino acid and codon models.
 
 ```
-cd timings/
+cd benchmark_time/
 ./run_all.sh
 ```
 
@@ -51,7 +51,7 @@ Please note that the cmake flag `-DBEAGLE_BENCHMARK_ENERGY=ON` is different from
 
 ```
 git clone -b tensor_cores https://github.com/beagle-dev/beagle-lib.git
-cd beagle-lib
+cd beagle-lib/
 mkdir build
 cd build/
 cmake -DBEAGLE_BENCHMARK_ENERGY=ON -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON ..
@@ -60,7 +60,7 @@ cmake -DBEAGLE_BENCHMARK_ENERGY=ON -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON .
 BEAST
 ```
 git clone -b tensor_cores https://github.com/beast-dev/beast-mcmc.git
-cd beast-mcmc
+cd beast-mcmc/
 ant
 ```
 
@@ -69,6 +69,6 @@ In [./benchmark_energy/run.sh](./benchmark_energy/run.sh) set `BEAST_JAR` and `L
 Run the following commands to measure energy consumption across 10 replicates with a random time delay between consecutive iterations for both amino acid and codon models,
 
 ```
-cd energy
+cd benchmark_energy/
 ./run.sh
 ```
