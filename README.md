@@ -22,7 +22,7 @@ git clone -b tensor_cores https://github.com/beagle-dev/beagle-lib.git
 cd beagle-lib
 mkdir build
 cd build/
-cmake -DBEAGLE_BENCHMARK=ON -DBEAGLE_BENCHMARK_ENERGY=OFF -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON -DBEAGLE_DEBUG_KERNELS=ON ..
+cmake -DBEAGLE_BENCHMARK_ENERGY=OFF -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON ..
 ```
 
 BEAST
@@ -47,14 +47,14 @@ cd timings/
 
 BEAGLE
 
-Please note the cmake flag `-DBEAGLE_BENCHMARK_ENERGY=ON`. This is different from the installation above.
+Please note that the cmake flag `-DBEAGLE_BENCHMARK_ENERGY=ON` is different from the installation above. Do not turn this flag ON to benchmark timings since measuring energy requires significant overhead.
 
 ```
 git clone -b tensor_cores https://github.com/beagle-dev/beagle-lib.git
 cd beagle-lib
 mkdir build
 cd build/
-cmake -DBEAGLE_BENCHMARK=ON -DBEAGLE_BENCHMARK_ENERGY=ON -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON -DBEAGLE_DEBUG_KERNELS=ON ..
+cmake -DBEAGLE_BENCHMARK_ENERGY=ON -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON ..
 ```
 
 BEAST
