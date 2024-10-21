@@ -59,7 +59,7 @@ git clone -b tensor-cores https://github.com/beagle-dev/beagle-lib.git
 cd beagle-lib/
 mkdir build
 cd build/
-cmake -DBEAGLE_BENCHMARK_ENERGY=ON -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON ..
+cmake -DBEAGLE_BENCHMARK_ENERGY=ON -DBUILD_OPENCL=OFF -DBEAGLE_TENSOR_CORES=ON -DBEAGLE_DEBUG_SYNCH ..
 ```
 
 You can set the install location using `CMAKE_INSTALL_PREFIX`. 
