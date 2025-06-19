@@ -1,4 +1,4 @@
-# Harnessing tensor cores for greater computational efficiency and lower energy consumption in phylogenetic inference
+# Tensor cores unlock efficient and lower-energy massive parallelization on phylogenetic trees
 
 Please note that you will need `nsys` and `ncu` installed on the system to time and profile kernels, respectively. Both these tools are available as part of the [CUDA toolkit](https://developer.nvidia.com/cuda-toolkit) or can be installed from [nsys](https://developer.nvidia.com/nsight-systems) and [ncu](https://developer.nvidia.com/nsight-compute).
 
