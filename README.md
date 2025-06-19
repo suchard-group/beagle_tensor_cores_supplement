@@ -12,6 +12,10 @@ Different versions of CUDA or the profiling tools would reqire further edits to 
 
 Please see instructions to compile BEAGLE and install BEAST for reproducing the benchmarks.
 
+## Results
+
+System-level and kernel-level profiling information, benchmarks, BEAST XML files, and associated scripts to reproduce the energy and time measurements have been deposited on [Zenodo](https://doi.org/10.5281/zenodo.15605155).
+
 ## Benchmark kernel timings
 
 ### Installation 
